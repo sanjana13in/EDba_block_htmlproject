@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Incrementer</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #4057b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(202, 179, 179, 0.1);
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <input type="number" id="numberInput" value="0">
+  <button id="add1">+1</button><br><br>
+  <button id="subtract1">-1</button><br><br>
+  <button id="add10">+10</button><br><br>
+  <button id="subtract10">-10</button><br><br>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const numberInput = document.getElementById('numberInput');
+    const add1Button = document.getElementById('add1');
+    const subtract1Button = document.getElementById('subtract1');
+    const add10Button = document.getElementById('add10');
+    const subtract10Button = document.getElementById('subtract10');
+
+    add1Button.addEventListener('click', function() {
+      numberInput.value = parseInt(numberInput.value) + 1;
+    });
+
+    subtract1Button.addEventListener('click', function() {
+      numberInput.value = parseInt(numberInput.value) - 1;
+    });
+
+    add10Button.addEventListener('click', function() {
+      numberInput.value = parseInt(numberInput.value) + 10;
+    });
+
+    subtract10Button.addEventListener('click', function() {
+      numberInput.value = parseInt(numberInput.value) - 10;
+    });
+  });
+</script>
+</body>
+</html>
